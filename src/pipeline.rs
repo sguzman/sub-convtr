@@ -84,24 +84,38 @@ fn parse_any(raw: &str, fmt: Format, cfg: &Config) -> Result<Transcript> {
     }
 
     match fmt {
-        Format::Srt | Format::Vtt => parse_srt_or_vtt_via_aspasia(raw),
+        Format::Srt | Format::Vtt => parse_srt_or_vtt_via_aspasia(raw, fmt),
         Format::Txt => formats::txt::parse_txt(raw, cfg),
         Format::Tsv => formats::tsv::parse_tsv(raw, cfg),
         Format::Json => formats::json::parse_json(raw),
     }
 }
 
-fn parse_srt_or_vtt_via_aspasia(raw: &str) -> Result<Transcript> {
-    if let Ok(srt) = raw.parse::<aspasia::SubRipSubtitle>() {
-        tracing::info!("parsed as SRT via aspasia");
-        let plain = aspasia::PlainSubtitle::from(&srt);
-        return Ok(plain_to_transcript(&plain));
-    }
+fn parse_srt_or_vtt_via_aspasia(raw: &str, fmt: Format) -> Result<Transcript> {
+    if fmt == Format::Vtt {
+        if let Ok(vtt) = raw.parse::<aspasia::WebVttSubtitle>() {
+            tracing::info!("parsed as VTT via aspasia");
+            let plain = aspasia::PlainSubtitle::from(&vtt);
+            return Ok(plain_to_transcript(&plain));
+        }
 
-    if let Ok(vtt) = raw.parse::<aspasia::WebVttSubtitle>() {
-        tracing::info!("parsed as VTT via aspasia");
-        let plain = aspasia::PlainSubtitle::from(&vtt);
-        return Ok(plain_to_transcript(&plain));
+        if let Ok(srt) = raw.parse::<aspasia::SubRipSubtitle>() {
+            tracing::info!("parsed as SRT via aspasia (fallback)");
+            let plain = aspasia::PlainSubtitle::from(&srt);
+            return Ok(plain_to_transcript(&plain));
+        }
+    } else {
+        if let Ok(srt) = raw.parse::<aspasia::SubRipSubtitle>() {
+            tracing::info!("parsed as SRT via aspasia");
+            let plain = aspasia::PlainSubtitle::from(&srt);
+            return Ok(plain_to_transcript(&plain));
+        }
+
+        if let Ok(vtt) = raw.parse::<aspasia::WebVttSubtitle>() {
+            tracing::info!("parsed as VTT via aspasia (fallback)");
+            let plain = aspasia::PlainSubtitle::from(&vtt);
+            return Ok(plain_to_transcript(&plain));
+        }
     }
 
     Err(anyhow!("failed to parse as SRT or VTT"))
