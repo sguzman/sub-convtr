@@ -30,3 +30,31 @@ columns = ["start", "end", "text", "speaker"]
 [formats.json]
 time_units = "seconds"
 wrapped = true
+
+[formats.ass]
+play_res_x = 1920
+play_res_y = 1080
+style_name = "Default"
+font_name = "Arial"
+font_size = 38.0
+primary_color = "&H00FFFFFF"
+secondary_color = "&H000000FF"
+outline_color = "&H00000000"
+back_color = "&H00000000"
+bold = false
+italic = false
+underline = false
+strike_out = false
+scale_x = 100
+scale_y = 100
+spacing = 0.0
+angle = 0.0
+border_style = 1
+outline = 2
+shadow = 0
+alignment = 2
+margin_l = 10
+margin_r = 10
+margin_v = 10
+encoding = 1
+event_layer = 0
