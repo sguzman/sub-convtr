@@ -1,3 +1,4 @@
+pub mod ass;
 pub mod json;
 pub mod srt;
 pub mod time;

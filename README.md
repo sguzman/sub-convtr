@@ -4,6 +4,7 @@ Convert transcripts and subtitles between:
 
 - SRT (.srt)
 - WebVTT (.vtt)
+- ASS/SSA (.ass, .ssa)
 - TXT (.txt)
 - TSV (.tsv)
 - JSON (.json)
@@ -52,6 +53,7 @@ Key knobs:
 - `formats.srt.wrap_width`, `formats.vtt.wrap_width`: control wrapping for those exports.
 - `formats.tsv.time_units`: choose between `ms`, `seconds`, or `timestamp` for TSV exports.
 - `formats.json.time_units` and `formats.json.wrapped`: control JSON time encoding and whether the output is wrapped in a schema envelope.
+- `formats.ass`: configure the ASS writer (resolution, style name, colors, margin/alignment, encoding) so your exported scripts land nicely in players that expect V4+ styles.
 
 ## CLI usage (examples)
 

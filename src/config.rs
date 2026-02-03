@@ -95,6 +95,7 @@ impl Default for Policy {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Formats {
+    pub ass: AssCfg,
     pub srt: SrtCfg,
     pub vtt: VttCfg,
     pub txt: TxtCfg,
@@ -105,6 +106,7 @@ pub struct Formats {
 impl Default for Formats {
     fn default() -> Self {
         Self {
+            ass: AssCfg::default(),
             srt: SrtCfg::default(),
             vtt: VttCfg::default(),
             txt: TxtCfg::default(),
@@ -184,6 +186,69 @@ impl Default for JsonCfg {
         Self {
             time_units: "seconds".to_string(),
             wrapped: true,
+        }
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AssCfg {
+    pub play_res_x: u32,
+    pub play_res_y: u32,
+    pub style_name: String,
+    pub font_name: String,
+    pub font_size: f64,
+    pub primary_color: String,
+    pub secondary_color: String,
+    pub outline_color: String,
+    pub back_color: String,
+    pub bold: bool,
+    pub italic: bool,
+    pub underline: bool,
+    pub strike_out: bool,
+    pub scale_x: u32,
+    pub scale_y: u32,
+    pub spacing: f64,
+    pub angle: f64,
+    pub border_style: u8,
+    pub outline: u8,
+    pub shadow: u8,
+    pub alignment: u8,
+    pub margin_l: i32,
+    pub margin_r: i32,
+    pub margin_v: i32,
+    pub encoding: i32,
+    pub event_layer: i32,
+}
+
+impl Default for AssCfg {
+    fn default() -> Self {
+        Self {
+            play_res_x: 1920,
+            play_res_y: 1080,
+            style_name: "Default".to_string(),
+            font_name: "Arial".to_string(),
+            font_size: 38.0,
+            primary_color: "&H00FFFFFF".to_string(),
+            secondary_color: "&H000000FF".to_string(),
+            outline_color: "&H00000000".to_string(),
+            back_color: "&H00000000".to_string(),
+            bold: false,
+            italic: false,
+            underline: false,
+            strike_out: false,
+            scale_x: 100,
+            scale_y: 100,
+            spacing: 0.0,
+            angle: 0.0,
+            border_style: 1,
+            outline: 2,
+            shadow: 0,
+            alignment: 2,
+            margin_l: 10,
+            margin_r: 10,
+            margin_v: 10,
+            encoding: 1,
+            event_layer: 0,
         }
     }
 }

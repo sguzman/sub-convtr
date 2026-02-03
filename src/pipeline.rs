@@ -56,6 +56,8 @@ fn infer_format_from_path_or_dash(input: &str) -> Format {
     {
         "srt" => Format::Srt,
         "vtt" => Format::Vtt,
+        "ass" => Format::Ass,
+        "ssa" => Format::Ass,
         "txt" => Format::Txt,
         "tsv" => Format::Tsv,
         "json" => Format::Json,
@@ -85,6 +87,7 @@ fn parse_any(raw: &str, fmt: Format, cfg: &Config) -> Result<Transcript> {
 
     match fmt {
         Format::Srt | Format::Vtt => parse_srt_or_vtt_via_aspasia(raw, fmt),
+        Format::Ass => formats::ass::parse_ass(raw),
         Format::Txt => formats::txt::parse_txt(raw, cfg),
         Format::Tsv => formats::tsv::parse_tsv(raw, cfg),
         Format::Json => formats::json::parse_json(raw),
@@ -222,6 +225,7 @@ fn render_any(t: &Transcript, fmt: Format, cfg: &Config) -> Result<String> {
     match fmt {
         Format::Srt => Ok(formats::srt::write_srt(t, cfg)),
         Format::Vtt => Ok(formats::vtt::write_vtt(t, cfg)),
+        Format::Ass => Ok(formats::ass::write_ass(t, cfg)),
         Format::Txt => Ok(formats::txt::write_txt(t, cfg)),
         Format::Tsv => formats::tsv::write_tsv(t, cfg),
         Format::Json => formats::json::write_json(

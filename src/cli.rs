@@ -56,6 +56,7 @@ pub struct ConvertCmd {
 pub enum Format {
     Srt,
     Vtt,
+    Ass,
     Txt,
     Tsv,
     Json,
@@ -66,6 +67,7 @@ impl Format {
         match self {
             Format::Srt => "srt",
             Format::Vtt => "vtt",
+            Format::Ass => "ass",
             Format::Txt => "txt",
             Format::Tsv => "tsv",
             Format::Json => "json",
