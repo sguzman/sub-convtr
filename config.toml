@@ -1,0 +1,32 @@
+[logging]
+level = "info"
+format = "pretty"
+debug_cue_samples = 20
+
+[policy]
+synthesize_timings = true
+chars_per_second = 18.0
+min_duration_ms = 600
+max_duration_ms = 8000
+gap_ms = 120
+normalize_whitespace = true
+trim_text = true
+timestamp_offset_ms = 0
+
+[formats.srt]
+wrap_width = 42
+max_lines = 2
+
+[formats.vtt]
+wrap_width = 60
+
+[formats.txt]
+mode = "timestamp_range"
+
+[formats.tsv]
+time_units = "ms"
+columns = ["start", "end", "text", "speaker"]
+
+[formats.json]
+time_units = "seconds"
+wrapped = true
