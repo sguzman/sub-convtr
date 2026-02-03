@@ -1,0 +1,241 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:00.000
+A Comprehensive History of see ess ess, Institutions, Specs, and Practice.
+
+00:00:00.000 --> 00:00:00.000
+Executive Summary. see ess ess, Cascading Style Sheets, has evolved through parallel tracks:
+
+00:00:00.000 --> 00:00:00.000
+the formal progression of W 3 C specifications and the informal ways developers actually used see ess ess in practice.
+
+00:00:00.000 --> 00:00:00.000
+Over nearly three decades, these tracks have continually influenced each other.
+
+00:00:00.000 --> 00:00:00.000
+Key phases include: Early Standards: see ess ess was born from the need to separate content from presentation on the Web.
+
+00:00:00.000 --> 00:00:00.000
+Håkon Wium Lie's one thousand nine hundred and ninety four proposal for Cascading style sheets,
+
+00:00:00.000 --> 00:00:00.000
+with the novel idea of blending author and user styles,
+
+00:00:00.000 --> 00:00:00.000
+led to see ess ess Level one in one thousand nine hundred and ninety six.
+
+00:00:00.000 --> 00:00:00.000
+Early adoption was slow due to limited browser support and a perception that see ess ess could only handle basic styling.
+
+00:00:00.000 --> 00:00:00.000
+Pioneering sites like see ess ess Zen Garden dramatically demonstrated see ess ess's potential by using one aitch tee em el
+
+00:00:00.000 --> 00:00:00.000
+file with multiple see ess ess designs,
+
+00:00:00.000 --> 00:00:00.000
+helping shift the industry from table-based layouts to see ess ess-based design.
+
+00:00:00.000 --> 00:00:00.000
+see ess ess one, see ess ess two, see ess ess two dot one:
+
+00:00:00.000 --> 00:00:00.000
+The W 3 C's see ess ess Working Group published see ess ess one defining basic styling,
+
+00:00:00.000 --> 00:00:00.000
+fonts, colors, spacing, then see ess ess two adding layout features like absolute positioning and media types. However,
+
+00:00:00.000 --> 00:00:00.000
+full see ess ess two proved ambitious,
+
+00:00:00.000 --> 00:00:00.000
+browser interoperability lagged,
+
+00:00:00.000 --> 00:00:00.000
+and parts of see ess ess two were later removed or deferred.
+
+00:00:00.000 --> 00:00:00.000
+see ess ess two dot one emerged as a refinement,
+
+00:00:00.000 --> 00:00:00.000
+focusing on what implementations agreed on,
+
+00:00:00.000 --> 00:00:00.000
+it became a W 3 C Recommendation in two thousand eleven after a decade of revisions.
+
+00:00:00.000 --> 00:00:00.000
+This long stabilization period gave browsers time to catch up,
+
+00:00:00.000 --> 00:00:00.000
+and by two thousand eleven,
+
+00:00:00.000 --> 00:00:00.000
+see ess ess two dot one was effectively the baseline of,
+
+00:00:00.000 --> 00:00:00.000
+modern see ess ess, support. Modular see ess ess three and, No see ess ess four: To avoid monolithic spec bottlenecks,
+
+00:00:00.000 --> 00:00:00.000
+the see ess ess Working Group split see ess ess into modular specifications after see ess ess two dot one.
+
+00:00:00.000 --> 00:00:00.000
+Each module, Selectors, Color, Flexbox, Grid, et ceteraadvances on its own, Level.
+
+00:00:00.000 --> 00:00:00.000
+All modules at Level three were informally termed, see ess ess three, but there was never a single see ess ess three spec.
+
+00:00:00.000 --> 00:00:00.000
+The Working Group explicitly moved away from version numbers, there is no see ess ess four.
+
+00:00:00.000 --> 00:00:00.000
+Instead, modules increment to Level four, Level five, et ceterawhen they add new features.
+
+00:00:00.000 --> 00:00:00.000
+For example, Selectors Level three was followed by Selectors Level four, ongoing, but we don't call this, see ess ess four.
+
+00:00:00.000 --> 00:00:00.000
+The current state of see ess ess is defined by see ess ess Snapshots,
+
+00:00:00.000 --> 00:00:00.000
+which collect the stable,
+
+00:00:00.000 --> 00:00:00.000
+interoperable specs at a point in time.
+
+00:00:00.000 --> 00:00:00.000
+This modular approach has allowed see ess ess to evolve faster and more incrementally,
+
+00:00:00.000 --> 00:00:00.000
+though it requires developers to track many spec modules.
+
+00:00:00.000 --> 00:00:00.000
+Browser Wars to Evergreen Browsers:
+
+00:00:00.000 --> 00:00:00.000
+Through the two thousands,
+
+00:00:00.000 --> 00:00:00.000
+browser engines, Trident or IE, Gecko or Firefox, Presto or Opera, WebKit or Safari, raced to implement, and often extend,
+
+00:00:00.000 --> 00:00:00.000
+see ess ess features,
+
+00:00:00.000 --> 00:00:00.000
+sometimes with proprietary or prefixed syntax.
+
+00:00:00.000 --> 00:00:00.000
+This led to inconsistencies, edot g.
+
+00:00:00.000 --> 00:00:00.000
+each engine required-moz-, -webkit-, et ceteraprefixes for new see ess ess properties.
+
+00:00:00.000 --> 00:00:00.000
+Around two thousand twelve, concerns grew that-webkit-only, see ess ess on popular mobile sites was fragmenting the web.
+
+00:00:00.000 --> 00:00:00.000
+The community responded with tools like Autoprefixer to automatically add needed prefixes,
+
+00:00:00.000 --> 00:00:00.000
+and the W 3 C encouraged cross-vendor standards efforts.
+
+00:00:00.000 --> 00:00:00.000
+By the mid-two thousand and tens,
+
+00:00:00.000 --> 00:00:00.000
+browsers adopted rapid-release,
+
+00:00:00.000 --> 00:00:00.000
+evergreen, cycles, Chrome, Firefox, Edge-Chromium, and collaborated on interoperability. Today,
+
+00:00:00.000 --> 00:00:00.000
+only three major engines remain,
+
+00:00:00.000 --> 00:00:00.000
+Chromium or Blink, WebKit, Gecko, and they coordinate on implementing features similarly, a far cry from the early chaos.
+
+00:00:00.000 --> 00:00:00.000
+Vendor prefixes are now largely a historical footnote,
+
+00:00:00.000 --> 00:00:00.000
+with official guidance that experimental features be behind flags rather than exposed in public with prefixes.
+
+00:00:00.000 --> 00:00:00.000
+Community Practices: In practice, developers continually innovated techniques to fill see ess ess gaps.
+
+00:00:00.000 --> 00:00:00.000
+Early on, complex layouts were achieved with aitch tee em el tables or floats, until see ess ess gained new layout systems.
+
+00:00:00.000 --> 00:00:00.000
+The late two thousands saw grid frameworks like Blueprint and nine hundred and sixtydot gs which used floats anddot col
+
+00:00:00.000 --> 00:00:00.000
+classes to create multi-column grids.
+
+00:00:00.000 --> 00:00:00.000
+As projects grew, maintainability issues led to see ess ess methodologies: edot g.
+
+00:00:00.000 --> 00:00:00.000
+OOCSS promoted reusable, objects, and separation of structure from skin,
+
+00:00:00.000 --> 00:00:00.000
+BEM introduced a strict naming convention to make styles predictable and avoid conflicts,
+
+00:00:00.000 --> 00:00:00.000
+SMACSS provided a categorization scheme for styles,
+
+00:00:00.000 --> 00:00:00.000
+base, layout, module, state, theme. Preprocessors like Sass and LESS emerged, adding variables, nesting,
+
+00:00:00.000 --> 00:00:00.000
+and functions to see ess ess authoring,
+
+00:00:00.000 --> 00:00:00.000
+which became standard team tools by early two thousand and tens.
+
+00:00:00.000 --> 00:00:00.000
+In the mid-two thousand and tens, PostCSS enabled a plugin ecosystem, with Autoprefixer its most famous plugin.
+
+00:00:00.000 --> 00:00:00.000
+The late two thousand and tens brought a shift toward component-driven UI development,
+
+00:00:00.000 --> 00:00:00.000
+giving rise to see ess ess-in-JS solutions that co-locate styles with JavaScript components,
+
+00:00:00.000 --> 00:00:00.000
+and utility-first see ess ess frameworks like Tailwind that trade semantic class names for speed and consistency.
+
+00:00:00.000 --> 00:00:00.000
+Spec and Practice Convergence:
+
+00:00:00.000 --> 00:00:00.000
+Modern see ess ess incorporates solutions to many long-time pain points,
+
+00:00:00.000 --> 00:00:00.000
+often informed by those community practices.
+
+00:00:00.000 --> 00:00:00.000
+For example, see ess ess now has flexbox and grid layout, eliminating the need for float-based grids.
+
+00:00:00.000 --> 00:00:00.000
+We have see ess ess custom properties, variables, reducing reliance on preprocessors for theming.
+
+00:00:00.000 --> 00:00:00.000
+New features like cascade layers address stylesheet architecture challenges that methodologies like BEM and ITCSS tried to
+
+00:00:00.000 --> 00:00:00.000
+solve, managing specificity across large codebases.
+
+00:00:00.000 --> 00:00:00.000
+Native see ess ess nesting is arriving, inspired by Sass's popular nesting syntax.
+
+00:00:00.000 --> 00:00:00.000
+The: has, selector allows parent or ancestor styling once only possible with JavaScript.
+
+00:00:00.000 --> 00:00:00.000
+And container queries fulfill the responsive design community's wish to style components based on their container size,
+
+00:00:00.000 --> 00:00:00.000
+not just the viewport. In effect, the formal spec process has sped up to deliver authors more powerful, ergonomic tools,
+
+00:00:00.000 --> 00:00:00.000
+often modeled on ideas proven in the field.
